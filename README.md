@@ -1,2 +1,2 @@
-# sn-pages
-Subnote Pages
+# catalina
+Subnote S3 interface prototype
