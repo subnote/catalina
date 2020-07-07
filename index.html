@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subnote+</title>
     <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css"/>
   </head>
 <body>
 
@@ -14,22 +16,12 @@
 
   <div class="cell shrink header medium-cell-block-container">
 
-    <!-- <div class="title-bar">
-      <div class="title-bar-left">
-        <img class="logo" src="assets/img/logo-blue.png">
-        <span class="text-right">The digital preservation service for creators</span>
-      </div>
-      <div class="title-bar-right">
-        <button class="menu-icon" type="button"></button>
-      </div>
-    </div> -->
-
     <div class="grid-x grid-margin-x grid-padding-x grid-padding-y" style="background: #000">
       <div class="cell shrink">
         <img class="logo" src="assets/img/logo-blue.png" alt="SubNote" label="Subnote+">
       </div>
       <div class="cell auto text-center">
-        <span class="text-center" style="color: #ffc700; text-transform: uppercase; font-size: 80%">
+        <span class="text-center" style="color: #ffc700; text-transform: capitalize; font-variant: small-caps; font-weight: bold">
           The digital preservation service for creators
         </span>
       </div>
@@ -38,27 +30,25 @@
       </div>
     </div>
 
-    <div class="top-bar" id="example-menu">
+    <div class="top-bar" style="border-bottom: solid black 1px; border-top: solid #9bacff 1px;">
       <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li><a href="#0">Photos</a></li>
-          <li><a href="#0">Videos</a></li>
-          <li><a href="#0">Music</a></li>
-          <li>
-            <a href="#0">Folders</a>
-            <ul class="menu vertical">
-              <li><a href="#">One</a></li>
-              <li><a href="#">Two</a></li>
-              <li><a href="#">Three</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
         <ul class="menu">
           <li><input type="search" placeholder="Search"></li>
           <li><button type="button" class="button">Search</button></li>
         </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li>
+            <a href="#" class="fi-camera" style="background-color: #2b42ff; color: #fff"> Photos</a>
+          </li>
+          <li><a href="#" class="fi-video" style="background-color: #5d71ff; color: #fff"> Videos</a></li>
+          <li><a href="#" class="fi-music" style="background-color: #9bacff; color: #fff"> Music</a></li>
+          <li><a href="#" class="fi-video" style="background-color: #fff"> Movies</a></li>
+          <li><a href="#" class="fi-folder" style="background-color: #f80"> Folders</a></li>
+          <li><a href="#" class="fi-folder" style="background-color: #ffc700"> Help</a></li>
+        </ul>
+
       </div>
     </div>
 
@@ -66,86 +56,269 @@
 
   <div class="cell medium-auto medium-cell-block-container">
     <div class="grid-x grid-padding-x grid-padding-y">
-      <div class="cell medium-3 medium-cell-block-y">
+      <div class="cell medium-2 medium-cell-block-y" style="background-color: #e6e6e6">
 
         <div id="collection-nav" class="collection-nav">
-          <ul class="accordion" data-accordion>
-            <li class="accordion-item is-active" data-accordion-item>
+          <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+            <li class="accordion-item" data-accordion-item>
+
+              <div class="reveal" id="exampleModal1" data-reveal>
+                <h1>The Guard says:</h1>
+                <p class="lead">Yes, my door leads to the castle.</p>
+                <p>The other door leads to the castle. If you asked the lying guard,
+                   the lying guard would tell you that the truth-y guard would say
+                   yes, beacause he is lying. If you asked the guard that was telling
+                   the truth, he would tell you that the lying guard would say yes
+                   because the lying guard is a liar.
+                </p>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
               <a href="#" class="accordion-title">Navigator</a>
               <div class="accordion-content" data-tab-content >
-                <textarea></textarea>
-                <button class="button">I do nothing!</button>
+                <h6>Ask a guard which door to the other guard would tell you to use.</h6>
+                <img class="thumbnail" src="assets/img//two-doors.jpg" >
+                <button class="button alert" data-open="exampleModal1">Red</button>
+                <button class="button" data-open="exampleModal1" style="background-color: #5d71ff">Blue</button>
               </div>
             </li>
             <li class="accordion-item" data-accordion-item>
               <a href="#" class="accordion-title">Catalog</a>
               <div class="accordion-content" data-tab-content>
-                <img class="spiral" src="assets/img/spiral.png">
-                <a href="#">Nowhere to Go</a>
+
+                <div class="callout warning">
+                  <img class="float-left" style="margin-right: 5px" src="assets/img/spiral.png">
+                  <h5>Catalogs are Ready to use</h5>
+                  <button type="button" class="success button" style="width: 100%">Create a new Catalog</button>
+                </div>
               </div>
             </li>
             <li class="accordion-item" data-accordion-item>
               <a href="#" class="accordion-title">Folders</a>
-              <div class="accordion-content" data-tab-content>
-                Type your name!
-                <input type="text"></input>
+              <div class="accordion-content" style="padding: 4px 0px" data-tab-content>
+                <table class="hover" style="font-size: 0.6em;">
+                  <thead>
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th>Name</th>
+                      <th>Objects</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><i class="fi-folder">&nbsp;</i></td>
+                      <td>Images</td>
+                      <td><i>(23)</i></td>
+                      <td><span class="badge success" title="OK">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                      <td><i class="fi-folder">&nbsp;</i></td>
+                      <td>Audio</td>
+                      <td><i>(5)</i></td>
+                      <td><span class="badge success" title="OK">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                      <td><i class="fi-folder">&nbsp;</i></td>
+                      <td>Notes</td>
+                      <td><i>(17)</i></td>
+                      <td><span class="badge success" title="OK">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                      <td><i class="fi-folder">&nbsp;</i></td>
+                      <td>05-08-2020-jeff-concert-drop</td>
+                      <td><i>(145)</i></td>
+                      <td><span class="badge warning" title="WARN">&nbsp;</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="text-center">
+                  <button type="button" class="success button" style="width: 90%">Create a new Folder</button>
+                </div>
               </div>
             </li>
             <li class="accordion-item" data-accordion-item>
               <a href="#" class="accordion-title">Collections</a>
               <div class="accordion-content" data-tab-content>
-                Type your name!
-                <input type="text"></input>
+
+                <div class="radius bordered shadow card">
+                  <img src="assets/img/galaxy.jpeg">
+                  <div class="card-divider">Spiral Galaxy</div>
+                  <div class="card-section">
+                    <p>Collection of pictures and Articles in space.</p>
+                  </div>
+                </div>
+                <div class="radius bordered shadow card">
+                  <img src="assets/img/rp/cruel.jpg">
+                  <div class="card-divider">RP</div>
+                  <div class="card-section">
+                    <p>A chronicle of the origin of the Backstreet Boys and N'SYNC.</p>
+                  </div>
+                </div>
+                <button type="button" class="success button" style="width: 100%">Create a new Collection</button>
+
+
               </div>
             </li>
             <li class="accordion-item" data-accordion-item>
               <a href="#" class="accordion-title">Publish Services</a>
               <div class="accordion-content" data-tab-content>
-                Make your cat famous on Instagram!
-                <input type="text"></input>
-              </div>
-            </li>
-            <li class="accordion-item" data-accordion-item>
-              <a href="#" class="accordion-title">Backend</a>
-              <div class="accordion-content" data-tab-content>
-                <img src="assets/img/rp/head.jpg">
-                <img src="assets/img/rp/body.jpg">
-                <img src="assets/img/rp/cruel.jpg">
-                <img src="assets/img/rp/gun.jpg">
+                <p><i class="fi-social-instagram" style="font-size: 2em">&nbsp;</i>Instagram</p>
+                <p><i class="fi-social-medium" style="font-size: 2em">&nbsp;</i>Medium</p>
+                <p><i class="fi-social-picasa" style="font-size: 2em">&nbsp;</i>Picasa</p>
+                <p><i class="fi-social-pinterest" style="font-size: 2em">&nbsp;</i>Pintrest</p>
+                <p><i class="fi-social-reddit" style="font-size: 2em">&nbsp;</i>Reddit</p>
+                <p><i class="fi-social-snapchat" style="font-size: 2em">&nbsp;</i>Snapchat</p>
+                <p><i class="fi-social-squidoo" style="font-size: 2em">&nbsp;</i>Squidoo</p>
+                <p><i class="fi-social-facebook" style="font-size: 2em">&nbsp;</i>Facebook</p>
+                <p><i class="fi-social-flickr" style="font-size: 2em">&nbsp;</i>Flickr</p>
+                <p><i class="fi-social-github" style="font-size: 2em">&nbsp;</i>Github</p>
               </div>
             </li>
           </ul>
         </div>
 
       </div>
-      <div class="cell medium-6 medium-cell-block-y">
-        <h2>Independent scrolling body</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus odio, accumsan id ullamcorper eget, varius nec erat. Nulla facilisi. Donec dui felis, euismod nec finibus vitae, dapibus quis arcu. Maecenas tempor et ipsum quis venenatis. Ut posuere sed augue sit amet efficitur. Sed imperdiet, justo id tempus rhoncus, est est viverra turpis, non vulputate magna lectus et nisl. Pellentesque ultrices porttitor vehicula. Ut aliquet efficitur ligula, a consectetur felis. Proin tristique ut augue nec luctus. Curabitur a sapien pretium, auctor elit a, efficitur erat. Donec tincidunt dui vel velit bibendum euismod. Cras vitae nibh dui. Aliquam erat volutpat. Etiam sit amet arcu a erat efficitur facilisis. Ut viverra dapibus turpis, et ornare justo. Integer in dui cursus, dignissim tortor a, hendrerit risus.</p>
-        <p>Suspendisse pulvinar, massa iaculis feugiat lobortis, dolor sapien vestibulum nulla, vel cursus tellus leo in lorem. Aliquam eu placerat urna. Suspendisse sed viverra orci, ut mattis neque. Fusce non ultrices nisi. In sagittis varius mollis. Quisque dolor quam, consectetur eu lacinia ac, ullamcorper vel arcu. Nullam mattis imperdiet nulla sed ornare. Praesent tristique, est id eleifend vestibulum, neque nibh condimentum ex, nec lobortis purus justo a libero. Phasellus id ex ac nunc hendrerit hendrerit. Nullam urna ipsum, rutrum at fringilla vel, venenatis non purus. Maecenas egestas ex vitae venenatis molestie. Ut et odio egestas, accumsan neque et, viverra nisl. Sed faucibus nec nulla sed imperdiet. Fusce quis sem ac urna semper tempor a id elit. Nulla fringilla vitae sapien a vehicula.</p>
-        <p>Nullam vestibulum lorem nec lectus egestas, nec ullamcorper diam maximus. Maecenas condimentum, nibh at blandit semper, ex erat tempus magna, id maximus neque velit accumsan nibh. Aenean dignissim lorem eu nisl laoreet vestibulum. Vivamus efficitur et augue vitae tincidunt. Etiam et magna felis. Integer mattis, nisi aliquet scelerisque blandit, ex mi sodales ante, eget accumsan quam magna et ligula. Curabitur id tristique leo. Proin rutrum mi vitae enim rhoncus, at cursus neque eleifend. Integer ultrices volutpat tellus ac porta. Fusce sollicitudin venenatis lacinia. Fusce ante lorem, gravida semper varius non, pharetra non erat. Sed dapibus arcu turpis, ac sollicitudin nibh lacinia vel. Nullam at enim porta, luctus metus sit amet, rutrum odio. Cras tempor enim vel pellentesque sollicitudin. Maecenas ullamcorper, sem non accumsan volutpat, neque tortor pulvinar orci, ut ultrices ligula lorem ut risus.</p>
-        <p>Aliquam facilisis, nibh eget posuere suscipit, arcu sapien iaculis odio, in molestie dolor lectus vitae sem. Cras id nunc mollis mi rutrum dapibus. Quisque rutrum a augue at scelerisque. Praesent faucibus ac enim vitae gravida. Sed et sodales elit. Duis magna lectus, interdum sit amet metus a, sagittis varius magna. Proin nibh lectus, egestas a luctus ut, dapibus et enim. Curabitur fringilla ipsum vitae nunc imperdiet consectetur eget non neque. Suspendisse ultricies odio quis lorem vulputate, ac vulputate turpis feugiat. Maecenas posuere rhoncus orci, in ornare velit suscipit tempor. Curabitur pretium nisl id lorem placerat consequat. In quis quam eros. Nam mattis elit eu quam sagittis, in varius erat tempor.</p>
-        <p>Fusce felis magna, pellentesque eget mollis a, rutrum id eros. Curabitur auctor varius arcu a consequat. Phasellus quis pulvinar enim, eu ultricies justo. Pellentesque risus libero, dapibus at erat ultricies, gravida varius erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla tempus, justo ut laoreet mollis, nunc tellus convallis urna, vel pretium dui velit eget ligula. Aliquam semper sed nulla a molestie. Maecenas at egestas massa, vitae aliquam mi. Fusce nec sem egestas, pretium lacus non, tincidunt sapien. Sed tristique odio at ultricies vulputate. Integer et convallis augue, eu aliquam enim. Mauris ut faucibus diam. Donec vulputate nunc sed congue accumsan. Etiam lobortis nisi quis lacinia pharetra.</p>
-      </div>
+      <div class="cell medium-7 medium-cell-block-y" style="background-color: #666">
+        <!-- <div class="cell medium-7 medium-cell-block-y full" style="background-color: red">
+          <p>hi</p>
+        </div> -->
 
-      <div class="cell medium-3 medium-cell-block-y">
-        <div class="callout primary">
-          <h5>This is a primary callout</h5>
-          <p>It has an easy to override visual style, and is appropriately subdued.</p>
+
+          <nav aria-label="You are here:" role="navigation">
+            <ul class="breadcrumbs">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Collection :: RP</a></li>
+              <li>
+                <span class="show-for-sr">Current: </span> Images (23)
+              </li>
+            </ul>
+          </nav>
+
+
+<div class="grid-container full">
+  <div class="grid-x auto">
+
+    <div class="media-object" style="background-color: #e6e6e6">
+      <div class="media-object-section">
+        <div class="thumbnail" style="width: 240px">
+          <img src="assets/img/rp/body.jpg" style="height: 140px">
         </div>
-        <div class="callout secondary">
-          <h5>This is a secondary callout</h5>
-          <p>It has an easy to override visual style, and is appropriately subdued.</p>
+      </div>
+      <div class="media-object-section">
+        <a href="/assets/img/rp/body.jpg">rp/body.jpg</a>
+        <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+        <i class="fi-wrench float-right" title="edit">&nbsp;</i>
+        <i class="fi-star float-right" title="favorite">&nbsp;</i>
+        <i class="fi-download float-right" title="download">&nbsp;</i>
+      </div>
+    </div> <!-- end of object -->
+
+    <div class="media-object" style="background-color: #e6e6e6">
+      <div class="media-object-section">
+        <div class="thumbnail" style="width: 240px">
+          <img src="assets/img/rp/cruel.jpg" style="height: 140px">
         </div>
+      </div>
+      <div class="media-object-section">
+        <a href="/assets/img/rp/cruel.jpg">rp/cruel.jpg</a>
+        <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+        <i class="fi-wrench float-right" title="edit">&nbsp;</i>
+        <i class="fi-star float-right" title="favorite">&nbsp;</i>
+        <i class="fi-download float-right" title="download">&nbsp;</i>
+      </div>
+    </div> <!-- end of object -->
+
+    <div class="media-object" style="background-color: #e6e6e6">
+      <div class="media-object-section">
+        <div class="thumbnail" style="width: 240px">
+          <img src="assets/img/rp/gun.jpg" style="height: 140px">
+        </div>
+      </div>
+      <div class="media-object-section">
+        <a href="/assets/img/rp/gun.jpg">rp/gun.jpg</a>
+        <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+        <i class="fi-wrench float-right" title="edit">&nbsp;</i>
+        <i class="fi-star float-right" title="favorite">&nbsp;</i>
+        <i class="fi-download float-right" title="download">&nbsp;</i>
+      </div>
+    </div> <!-- end of object -->
+
+
+    <div class="media-object" style="background-color: #e6e6e6">
+      <div class="media-object-section">
+        <div class="thumbnail" style="width: 240px">
+          <img src="assets/img/rp/head.jpg" style="height: 140px">
+        </div>
+      </div>
+      <div class="media-object-section">
+        <a href="/assets/img/rp/head.jpg">rp/head.jpg</a>
+        <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+        <i class="fi-wrench float-right" title="edit">&nbsp;</i>
+        <i class="fi-star float-right" title="favorite">&nbsp;</i>
+        <i class="fi-download float-right" title="download">&nbsp;</i>
+      </div>
+    </div> <!-- end of object -->
+
+    <div class="media-object" style="background-color: #e6e6e6">
+      <div class="media-object-section">
+        <div class="thumbnail" style="width: 240px">
+          <img src="assets/img/rp/shoot.jpg" style="height: 140px">
+        </div>
+      </div>
+      <div class="media-object-section">
+        <a href="/assets/img/rp/shoot.jpg">rp/shoot.jpg</a>
+        <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+        <i class="fi-wrench float-right" title="edit">&nbsp;</i>
+        <i class="fi-star float-right" title="favorite">&nbsp;</i>
+        <i class="fi-download float-right" title="download">&nbsp;</i>
+      </div>
+    </div> <!-- end of object -->
+
+  </div>
+</div>
+
+
+
+<!--
+<div class="grid-container">
+  <div class="grid-x grid-margin-x small-up-1 medium-up-2">
+
+    <div class="cell">
+      <div class="card">
+        <img src="assets/img/rp/head.jpg">
+        <div class="card-section">
+        <span>rp/head.jpg</span>
+        <i class="fi-download float-right">&nbsp;</i>
+        <i class="fi-star float-right">&nbsp;</i>
+        <i class="fi-wrench float-right">&nbsp;</i>
+        </div>
+      </div>
+    </div>
+
+    <div class="cell">
+      <div class="card">
+        <img src="assets/img/rp/shoot.jpg">
+        <div class="card-section">
+        <span>rp/shoot.jpg</span>
+        <i class="fi-download float-right">&nbsp;</i>
+        <i class="fi-star float-right">&nbsp;</i>
+        <i class="fi-wrench float-right">&nbsp;</i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+-->
+
+</div>
+
+      <div class="cell medium-3 medium-cell-block-y" style="background-color: #e6e6e6">
         <div class="callout success">
           <h5>This is a success callout</h5>
-          <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        </div>
-        <div class="callout warning">
-          <h5>This is a warning callout</h5>
-          <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        </div>
-        <div class="callout alert">
-          <h5>This is a alert callout</h5>
           <p>It has an easy to override visual style, and is appropriately subdued.</p>
         </div>
       </div>
@@ -154,18 +327,21 @@
   </div>
   <div class="cell shrink footer">
 
-<div class="top-bar" id="example-menu">
-<div class="top-bar-left flexbox-container align-justify">
-  <span class="badge success">&nbsp;</span>
-  <span>Synchronized</span>
-</div>
-<div class="top-bar-right">
-  <ul class="menu">
-    <li><input type="search" placeholder="Search"></li>
-    <li><button type="button" class="button">Search</button></li>
-  </ul>
-</div>
-</div>
+
+    <div class="grid-x grid-margin-x grid-padding-x grid-padding-y" style="background: #000; font-size: 0.7em; color: #fff;">
+      <div class="cell shrink">
+        <span class="badge success">&nbsp;</span>
+        <span class="primary" style="padding: 0.3em;">All Systems Operational</span>
+      </div>
+      <div class="cell auto text-center">
+        <span class="text-center">
+          &copy; 2020 Subnote
+        </span>
+      </div>
+      <div class="cell shrink">
+        <img class="spiral" src="assets/img/spiral-light.png" style="height: 16px">
+      </div>
+    </div>
 
   </div>
 </div>
