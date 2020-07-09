@@ -14,7 +14,7 @@
 
 <div class="grid-y medium-grid-frame">
 
-  <div class="cell shrink header medium-cell-block-container"><div  id="header-content" class="grid-x align-middle grid-margin-x grid-padding-x grid-padding-y">
+  <div class="cell shrink header medium-cell-block-container"><div  id="header-content" class="grid-x grid-margin-x grid-padding-x grid-padding-y align-middle">
 
   <div class="cell shrink">
     <img class="logo" src="assets/img/logo-blue.png" alt="SubNote" label="Subnote+">
@@ -57,7 +57,7 @@
   <div class="cell medium-auto medium-cell-block-container">
     <div class="grid-x grid-padding-x grid-padding-y">
 
-      <div class="cell medium-2 medium-cell-block-y" style="background-color: #e6e6e6">
+      <div class="cell medium-2 medium-cell-block-y">
         <div id="collection-nav" class="collection-nav">
           <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
             <li class="accordion-item" data-accordion-item>
@@ -181,168 +181,473 @@
         </div>
       </div>
 
-      <div class="cell medium-7 medium-cell-block-y" style="background-color: #666">
+      <div class="cell medium-7 medium-cell-block-y">
         <nav aria-label="You are here:" role="navigation">
           <ul class="breadcrumbs">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Collection :: RP</a></li>
+            <li><a href="#" class="fi-home"> Home</a></li>
+            <li><a href="#" class="fi-archive"> Collection :: RP</a></li>
             <li>
               <span class="show-for-sr">Current: </span> Images (23)
             </li>
           </ul>
         </nav>
+        <ul class="tabs" data-tabs id="example-tabs" style="margin-bottom: 12px">
         
-        <div id="content-card-container" class="grid-container">
-          <div class="grid-x grid-padding-x small-up-2 medium-up-4 large-up-6">
+          <li class="tabs-title">
+            <a href="#panel-cards">
+              <i class="fi-thumbnails" style="font-size: 2em;">&nbsp;</i>
+              Cards
+            </a>
+          </li>
         
-            <div class="cell">
-              <div class="card">
-                <a href="#" class="thumbnail">
-                  <img src="assets/img/rp/head.jpg">
-                </a>
-                <div class="card-section">
-                <span>rp/head.jpg</span>
-                <i class="fi-download float-right">&nbsp;</i>
-                <i class="fi-star float-right">&nbsp;</i>
-                <i class="fi-wrench float-right">&nbsp;</i>
+          <li class="tabs-title">
+            <a href="#panel-list">
+              <i class="fi-list-thumbnails" style="font-size: 2em;">&nbsp;</i>
+              List
+            </a>
+          </li>
+        
+          <li class="tabs-title is-active">
+            <a href="#panel-carousel" aria-selected="true">
+              <i class="fi-guide-dog" style="font-size: 2em;">&nbsp;</i>
+              Carousel
+            </a>
+          </li>
+        
+          <li class="tabs-title">
+            <a href="#panel-random">
+              <i class="fi-skull" style="font-size: 2em;">&nbsp;</i>
+              Random
+            </a>
+          </li>
+        
+        </ul>
+        
+        <div class="tabs-content" data-tabs-content="example-tabs">
+        
+          <div class="tabs-panel" id="panel-cards">
+            <div id="content-card-container" class="grid-container full">
+              <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-6">
+            
+                <div class="cell">
+                  <div class="card">
+                    <a href="assets/img/rp/head.jpg" class="thumbnail">
+                      <img src="assets/img/rp/head.jpg">
+                    </a>
+                    <div class="card-section">
+                    <span>rp/head.jpg</span>
+                    <div class="float-right">
+                      <i class="fi-star">&nbsp;</i>
+                      <i class="fi-wrench">&nbsp;</i>
+                      <a href="assets/img/rp/head.jpg" class="fi-download">&nbsp;</a>
+                    </div>
+                    </div>
+                  </div>
                 </div>
+            
+                <div class="cell">
+                  <div class="card">
+                    <a href="assets/img/rp/shoot.jpg" class="thumbnail">
+                      <img src="assets/img/rp/shoot.jpg">
+                    </a>
+                    <div class="card-section">
+                      <span>rp/shoot.jpg-and-there-is-more-name.bin</span>
+                      <div class="float-right">
+                        <i class="fi-star">&nbsp;</i>
+                        <i class="fi-wrench">&nbsp;</i>
+                        <a href="assets/img/rp/shoot.jpg" class="fi-download">&nbsp;</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="cell">
+                  <div class="card">
+                    <a href="assets/img/rp/body.jpg" class="thumbnail">
+                      <img src="assets/img/rp/body.jpg">
+                    </a>
+                    <div class="card-section">
+                    <span>rp/body.jpg</span>
+                    <div class="float-right">
+                      <i class="fi-star">&nbsp;</i>
+                      <i class="fi-wrench">&nbsp;</i>
+                      <a href="assets/img/rp/body.jpg" class="fi-download">&nbsp;</a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="cell">
+                  <div class="card">
+                    <a href="assets/img/rp/cruel.jpg" class="thumbnail">
+                      <img src="assets/img/rp/cruel.jpg">
+                    </a>
+                    <div class="card-section">
+                    <span>rp/cruel.jpg</span>
+                    <div class="float-right">
+                      <i class="fi-star">&nbsp;</i>
+                      <i class="fi-wrench">&nbsp;</i>
+                      <a href="assets/img/rp/cruel.jpg" class="fi-download">&nbsp;</a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="cell">
+                  <div class="card">
+                    <a href="assets/img/rp/gun.jpg" class="thumbnail">
+                      <img src="assets/img/rp/gun.jpg">
+                    </a>
+                    <div class="card-section">
+                    <span>rp/gun.jpg</span>
+                    <div class="float-right">
+                      <i class="fi-star">&nbsp;</i>
+                      <i class="fi-wrench">&nbsp;</i>
+                      <a href="assets/img/rp/gun.jpg" class="fi-download">&nbsp;</a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="cell">
+                  <div class="card">
+                    <a href="assets/img/rp/head.jpg" class="thumbnail">
+                      <img src="assets/img/rp/head.jpg">
+                    </a>
+                    <div class="card-section">
+                    <span>rp/head.jpg</span>
+                    <div class="float-right">
+                      <i class="fi-star">&nbsp;</i>
+                      <i class="fi-wrench">&nbsp;</i>
+                      <a href="assets/img/rp/head.jpg" class="fi-download">&nbsp;</a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="cell">
+                  <div class="card">
+                    <a href="assets/img/rp/shoot.jpg" class="thumbnail">
+                      <img src="assets/img/rp/shoot.jpg">
+                    </a>
+                    <div class="card-section">
+                      <span>rp/shoot.jpg-and-there-is-more-name.bin</span>
+                      <div class="float-right">
+                        <i class="fi-star">&nbsp;</i>
+                        <i class="fi-wrench">&nbsp;</i>
+                        <a href="assets/img/rp/shoot.jpg" class="fi-download">&nbsp;</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="cell">
+                  <div class="card">
+                    <a href="assets/img/rp/body.jpg" class="thumbnail">
+                      <img src="assets/img/rp/body.jpg">
+                    </a>
+                    <div class="card-section">
+                    <span>rp/body.jpg</span>
+                    <div class="float-right">
+                      <i class="fi-star">&nbsp;</i>
+                      <i class="fi-wrench">&nbsp;</i>
+                      <a href="assets/img/rp/body.jpg" class="fi-download">&nbsp;</a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="cell">
+                  <div class="card">
+                    <a href="assets/img/rp/cruel.jpg" class="thumbnail">
+                      <img src="assets/img/rp/cruel.jpg">
+                    </a>
+                    <div class="card-section">
+                    <span>rp/cruel.jpg</span>
+                    <div class="float-right">
+                      <i class="fi-star">&nbsp;</i>
+                      <i class="fi-wrench">&nbsp;</i>
+                      <a href="assets/img/rp/cruel.jpg" class="fi-download">&nbsp;</a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="cell">
+                  <div class="card">
+                    <a href="assets/img/rp/gun.jpg" class="thumbnail">
+                      <img src="assets/img/rp/gun.jpg">
+                    </a>
+                    <div class="card-section">
+                    <span>rp/gun.jpg</span>
+                    <div class="float-right">
+                      <i class="fi-star" title="favorite">&nbsp;</i>
+                      <i class="fi-wrench" title="edit">&nbsp;</i>
+                      <a href="assets/img/rp/gun.jpg" class="fi-download" title="download">&nbsp;</a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+            
               </div>
             </div>
-        
-            <div class="cell">
-              <div class="card">
-                <a href="#" class="thumbnail">
-                  <img src="assets/img/rp/shoot.jpg">
-                </a>
-                <div class="card-section">
-                <span>rp/shoot.jpg</span>
-                <i class="fi-download float-right">&nbsp;</i>
-                <i class="fi-star float-right">&nbsp;</i>
-                <i class="fi-wrench float-right">&nbsp;</i>
-                </div>
-              </div>
-            </div>
-        
-            <div class="cell">
-              <div class="card">
-                <a href="#" class="thumbnail">
-                  <img src="assets/img/rp/body.jpg">
-                </a>
-                <div class="card-section">
-                <span>rp/body.jpg</span>
-                <i class="fi-download float-right">&nbsp;</i>
-                <i class="fi-star float-right">&nbsp;</i>
-                <i class="fi-wrench float-right">&nbsp;</i>
-                </div>
-              </div>
-            </div>
-        
-            <div class="cell">
-              <div class="card">
-                <a href="#" class="thumbnail">
-                  <img src="assets/img/rp/cruel.jpg">
-                </a>
-                <div class="card-section">
-                <span>rp/cruel.jpg</span>
-                <i class="fi-download float-right">&nbsp;</i>
-                <i class="fi-star float-right">&nbsp;</i>
-                <i class="fi-wrench float-right">&nbsp;</i>
-                </div>
-              </div>
-            </div>
-        
-            <div class="cell">
-              <div class="card">
-                <a href="#" class="thumbnail">
-                  <img src="assets/img/rp/gun.jpg">
-                </a>
-                <div class="card-section">
-                <span>rp/gun.jpg</span>
-                <i class="fi-download float-right">&nbsp;</i>
-                <i class="fi-star float-right">&nbsp;</i>
-                <i class="fi-wrench float-right">&nbsp;</i>
-                </div>
-              </div>
-            </div>
-        
-            <div class="cell">
-              <div class="card">
-                <a href="#" class="thumbnail">
-                  <img src="assets/img/rp/head.jpg">
-                </a>
-                <div class="card-section">
-                <span>rp/head.jpg</span>
-                <i class="fi-download float-right">&nbsp;</i>
-                <i class="fi-star float-right">&nbsp;</i>
-                <i class="fi-wrench float-right">&nbsp;</i>
-                </div>
-              </div>
-            </div>
-        
-            <div class="cell">
-              <div class="card">
-                <a href="#" class="thumbnail">
-                  <img src="assets/img/rp/shoot.jpg">
-                </a>
-                <div class="card-section">
-                <span>rp/shoot.jpg</span>
-                <i class="fi-download float-right">&nbsp;</i>
-                <i class="fi-star float-right">&nbsp;</i>
-                <i class="fi-wrench float-right">&nbsp;</i>
-                </div>
-              </div>
-            </div>
-        
-            <div class="cell">
-              <div class="card">
-                <a href="#" class="thumbnail">
-                  <img src="assets/img/rp/body.jpg">
-                </a>
-                <div class="card-section">
-                <span>rp/body.jpg</span>
-                <i class="fi-download float-right">&nbsp;</i>
-                <i class="fi-star float-right">&nbsp;</i>
-                <i class="fi-wrench float-right">&nbsp;</i>
-                </div>
-              </div>
-            </div>
-        
-            <div class="cell">
-              <div class="card">
-                <a href="#" class="thumbnail">
-                  <img src="assets/img/rp/cruel.jpg">
-                </a>
-                <div class="card-section">
-                <span>rp/cruel.jpg</span>
-                <i class="fi-download float-right">&nbsp;</i>
-                <i class="fi-star float-right">&nbsp;</i>
-                <i class="fi-wrench float-right">&nbsp;</i>
-                </div>
-              </div>
-            </div>
-        
-            <div class="cell">
-              <div class="card">
-                <a href="#" class="thumbnail">
-                  <img src="assets/img/rp/gun.jpg">
-                </a>
-                <div class="card-section">
-                <span>rp/gun.jpg</span>
-                <i class="fi-download float-right">&nbsp;</i>
-                <i class="fi-star float-right">&nbsp;</i>
-                <i class="fi-wrench float-right">&nbsp;</i>
-                </div>
-              </div>
-            </div>
-        
           </div>
+        
+          <div class="tabs-panel" id="panel-list">
+            <div class="grid-container full">
+              <div class="grid-x auto">
+            
+                <div class="media-object" style="background-color: #e6e6e6">
+                  <div class="media-object-section">
+                    <div class="thumbnail" style="width: 240px">
+                      <img src="assets/img/rp/cruel.jpg" style="height: 140px">
+                    </div>
+                  </div>
+                  <div class="media-object-section">
+                    <a href="/assets/img/rp/cruel.jpg">rp/cruel.jpg</a>
+                    <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+                    <i class="fi-wrench float-right" title="edit">&nbsp;</i>
+                    <i class="fi-star float-right" title="favorite">&nbsp;</i>
+                    <i class="fi-download float-right" title="download">&nbsp;</i>
+                  </div>
+                </div> <!-- end of object -->
+            
+                <div class="media-object" style="background-color: #e6e6e6">
+                  <div class="media-object-section">
+                    <div class="thumbnail" style="width: 240px">
+                      <img src="assets/img/rp/gun.jpg" style="height: 140px">
+                    </div>
+                  </div>
+                  <div class="media-object-section">
+                    <a href="/assets/img/rp/gun.jpg">rp/gun.jpg</a>
+                    <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+                    <i class="fi-wrench float-right" title="edit">&nbsp;</i>
+                    <i class="fi-star float-right" title="favorite">&nbsp;</i>
+                    <i class="fi-download float-right" title="download">&nbsp;</i>
+                  </div>
+                </div> <!-- end of object -->
+            
+                <div class="media-object" style="background-color: #e6e6e6">
+                  <div class="media-object-section">
+                    <div class="thumbnail" style="width: 240px">
+                      <img src="assets/img/rp/body.jpg" style="height: 140px">
+                    </div>
+                  </div>
+                  <div class="media-object-section">
+                    <a href="/assets/img/rp/body.jpg">rp/body.jpg</a>
+                    <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+                    <i class="fi-wrench float-right" title="edit">&nbsp;</i>
+                    <i class="fi-star float-right" title="favorite">&nbsp;</i>
+                    <i class="fi-download float-right" title="download">&nbsp;</i>
+                  </div>
+                </div> <!-- end of object -->
+            
+                <div class="media-object" style="background-color: #e6e6e6">
+                  <div class="media-object-section">
+                    <div class="thumbnail" style="width: 240px">
+                      <img src="assets/img/rp/head.jpg" style="height: 140px">
+                    </div>
+                  </div>
+                  <div class="media-object-section">
+                    <a href="/assets/img/rp/head.jpg">rp/head.jpg</a>
+                    <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+                    <i class="fi-wrench float-right" title="edit">&nbsp;</i>
+                    <i class="fi-star float-right" title="favorite">&nbsp;</i>
+                    <i class="fi-download float-right" title="download">&nbsp;</i>
+                  </div>
+                </div> <!-- end of object -->
+            
+                <div class="media-object" style="background-color: #e6e6e6">
+                  <div class="media-object-section">
+                    <div class="thumbnail" style="width: 240px">
+                      <img src="assets/img/rp/shoot.jpg" style="height: 140px">
+                    </div>
+                  </div>
+                  <div class="media-object-section">
+                    <a href="/assets/img/rp/shoot.jpg">rp/shoot.jpg</a>
+                    <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+                    <i class="fi-wrench float-right" title="edit">&nbsp;</i>
+                    <i class="fi-star float-right" title="favorite">&nbsp;</i>
+                    <i class="fi-download float-right" title="download">&nbsp;</i>
+                  </div>
+                </div> <!-- end of object -->
+            
+              </div>
+            </div>
+          </div>
+        
+          <div class="tabs-panel is-active" id="panel-carousel">
+            <div class="row">
+              <div class="columns">
+                <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+                  <ul class="orbit-container">
+                    <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+                    <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+                    <li class="is-active orbit-slide">
+                      <img class="orbit-image" src="assets/img/two-doors.jpg" alt="Space">
+                      <figcaption class="orbit-caption">Space, the final frontier.</figcaption>
+                    </li>
+                    <li class="orbit-slide">
+                      <img class="orbit-image" src="//foundation.zurb.com/sites/docs/assets/img/orbit/01.jpg" alt="Space">
+                      <figcaption class="orbit-caption">Space, the final frontier.</figcaption>
+                    </li>
+                    <li class="orbit-slide">
+                      <img class="orbit-image" src="//foundation.zurb.com/sites/docs/assets/img/orbit/02.jpg" alt="Space">
+                      <figcaption class="orbit-caption">Lets Rocket!</figcaption>
+                    </li>
+                    <li class="orbit-slide">
+                      <img class="orbit-image" src="//foundation.zurb.com/sites/docs/assets/img/orbit/03.jpg" alt="Space">
+                      <figcaption class="orbit-caption">Encapsulating</figcaption>
+                    </li>
+                    <li class="orbit-slide">
+                      <img class="orbit-image" src="//foundation.zurb.com/sites/docs/assets/img/orbit/04.jpg" alt="Space">
+                      <figcaption class="orbit-caption">Outta This World</figcaption>
+                    </li>
+                  </ul>
+                  <nav class="orbit-bullets">
+                    <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+                    <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+                    <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+                    <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+                    <button data-slide="4"><span class="show-for-sr">Fifth slide details.</span></button>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="tabs-panel" id="panel-random">
+            <img class="thumbnail" src="assets/img/rp/body.jpg">
+          </div>
+        
         </div>
       </div>
 
-      <div class="cell medium-3 medium-cell-block-y" style="background-color: #e6e6e6">
+      <div class="cell medium-3 medium-cell-block-y">
         <div class="callout success">
           <h5>This is a success callout</h5>
           <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        </div>
+        <div id="collection-nav" class="collection-nav">
+          <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+            <li class="accordion-item" data-accordion-item>
+        
+              <div class="reveal" id="exampleModal1" data-reveal>
+                <h1>The Guard says:</h1>
+                <p class="lead">Yes, my door leads to the castle.</p>
+                <p>The other door leads to the castle. If you asked the lying guard,
+                   the lying guard would tell you that the truth-y guard would say
+                   yes, beacause he is lying. If you asked the guard that was telling
+                   the truth, he would tell you that the lying guard would say yes
+                   because the lying guard is a liar.
+                </p>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+        
+              <a href="#" class="accordion-title">Navigator</a>
+              <div class="accordion-content" data-tab-content >
+                <h6>Ask a guard which door to the other guard would tell you to use.</h6>
+                <img class="thumbnail" src="assets/img//two-doors.jpg" >
+                <button class="button alert" data-open="exampleModal1">Red</button>
+                <button class="button" data-open="exampleModal1" style="background-color: #5d71ff">Blue</button>
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Catalog</a>
+              <div class="accordion-content" data-tab-content>
+        
+                <div class="callout warning">
+                  <img class="float-left" style="margin-right: 5px" src="assets/img/spiral.png">
+                  <h5>Catalogs are Ready to use</h5>
+                  <button type="button" class="success button" style="width: 100%">Create a new Catalog</button>
+                </div>
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Folders</a>
+              <div class="accordion-content" style="padding: 4px 0px" data-tab-content>
+                <table class="hover" style="font-size: 0.6em;">
+                  <thead>
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th>Name</th>
+                      <th>Objects</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><i class="fi-folder">&nbsp;</i></td>
+                      <td>Images</td>
+                      <td><i>(23)</i></td>
+                      <td><span class="badge success" title="OK">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                      <td><i class="fi-folder">&nbsp;</i></td>
+                      <td>Audio</td>
+                      <td><i>(5)</i></td>
+                      <td><span class="badge success" title="OK">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                      <td><i class="fi-folder">&nbsp;</i></td>
+                      <td>Notes</td>
+                      <td><i>(17)</i></td>
+                      <td><span class="badge success" title="OK">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                      <td><i class="fi-folder">&nbsp;</i></td>
+                      <td>05-08-2020-jeff-concert-drop</td>
+                      <td><i>(145)</i></td>
+                      <td><span class="badge warning" title="WARN">&nbsp;</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="text-center">
+                  <button type="button" class="success button" style="width: 90%">Create a new Folder</button>
+                </div>
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Collections</a>
+              <div class="accordion-content" data-tab-content>
+        
+                <div class="radius bordered shadow card">
+                  <img src="assets/img/galaxy.jpeg">
+                  <div class="card-divider">Spiral Galaxy</div>
+                  <div class="card-section">
+                    <p>Collection of pictures and Articles in space.</p>
+                  </div>
+                </div>
+                <div class="radius bordered shadow card">
+                  <img src="assets/img/rp/cruel.jpg">
+                  <div class="card-divider">RP</div>
+                  <div class="card-section">
+                    <p>A chronicle of the origin of the Backstreet Boys and N'SYNC.</p>
+                  </div>
+                </div>
+                <button type="button" class="success button" style="width: 100%">Create a new Collection</button>
+        
+        
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Publish Services</a>
+              <div class="accordion-content" data-tab-content>
+                <p><i class="fi-social-instagram" style="font-size: 2em">&nbsp;</i>Instagram</p>
+                <p><i class="fi-social-medium" style="font-size: 2em">&nbsp;</i>Medium</p>
+                <p><i class="fi-social-picasa" style="font-size: 2em">&nbsp;</i>Picasa</p>
+                <p><i class="fi-social-pinterest" style="font-size: 2em">&nbsp;</i>Pintrest</p>
+                <p><i class="fi-social-reddit" style="font-size: 2em">&nbsp;</i>Reddit</p>
+                <p><i class="fi-social-snapchat" style="font-size: 2em">&nbsp;</i>Snapchat</p>
+                <p><i class="fi-social-squidoo" style="font-size: 2em">&nbsp;</i>Squidoo</p>
+                <p><i class="fi-social-facebook" style="font-size: 2em">&nbsp;</i>Facebook</p>
+                <p><i class="fi-social-flickr" style="font-size: 2em">&nbsp;</i>Flickr</p>
+                <p><i class="fi-social-github" style="font-size: 2em">&nbsp;</i>Github</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
 
